@@ -38,10 +38,9 @@ M.chat = function(state)
     return
   end
 
-  -- TODO: Obtained from a config file or env variable
   local promptType = 'default'
-  local name = ''
-  local url = ''
+  local name = os.getenv("USER_NAME")
+  local url = os.getenv("CHATGPT_API_ENDPOINT")
 
   local job = Job:new({
     command = 'curl',
